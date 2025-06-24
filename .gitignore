@@ -1,2 +1,16 @@
 ".env" 
 ".env" 
+# Ignore node_modules folders
+imagify/server/node_modules/
+imagify/client/node_modules/
+
+# Ignore environment files
+imagify/server/.env
+imagify/client/.env
+
+# Ignore log files
+*.log
+
+# OS-specific junk files
+.DS_Store
+Thumbs.db
