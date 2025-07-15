@@ -12,7 +12,12 @@ await connectDB()
 
 // Intialize Middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: 'https://your-backend-service.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}))
 
 // API routes
 app.use('/api/user',userRouter)
